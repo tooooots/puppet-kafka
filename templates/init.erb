@@ -51,11 +51,11 @@ fi
 
 start() {
 
-  <% unless @limit_nofile.nil? -%>
+  <% if @limit_nofile -%>
   ulimit -n <%= @limit_nofile %>
   <% end -%>
 
-  <% unless @limit_core.nil? -%>
+  <% if @limit_core -%>
   ulimit -c <%= @limit_core %>
   <% end -%>
 
