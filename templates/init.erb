@@ -27,7 +27,7 @@ export <%= k %>="<%= v %>"
 PID_FILE="/var/run/$NAME.pid"
 KAFKA_USER=<%= @user %>
 <%- case @service_name when 'kafka' -%>
-PGREP_PATTERN=kafka.Kafka
+PGREP_PATTERN=kafka..afka
 DAEMON="<%= @bin_dir %>/kafka-server-start.sh"
 DAEMON_OPTS="<%= @config_dir %>/server.properties"
 <%- when 'kafka-consumer' -%>
